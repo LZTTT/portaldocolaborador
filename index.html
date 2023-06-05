@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Colaborador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Portal do Colaborador</h1>
+    <form action="registrar.php" method="post">
+        <label class="nome" for="nome">Nome do funcionário:</label>
+        <input type="text" name="nome" required><br>
+        <button class="btn" type="submit" name="tipo_registro" value="entrada">Registrar Entrada</button>
+        <button class="btn" type="submit" name="tipo_registro" value="saida">Registrar Saída</button>
+    </form>
+</body>
+</html>
