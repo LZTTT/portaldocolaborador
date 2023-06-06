@@ -13,7 +13,11 @@
 <body>
     <h1>Portal do Colaborador</h1>
     <form action="registrar.php" method="post">
-        <label class="nome" for="nome">Nome do funcionário:</label>
+        <label class="nome" for="matricula">Matricula:</label>
+        <input type="matricula" name="matricula" required><br>
+        <label class="nome" for="senha">Senha:</label>
+        <input type="password" name="senha" required><br>
+        <label class="nome" for="nome">Nome do colaborador:</label>
         <input type="text" name="nome" required><br>
         <button class="btn" type="submit" name="tipo_registro" value="entrada">Registrar Entrada</button>
         <button class="btn" type="submit" name="tipo_registro" value="saida">Registrar Saída</button>
