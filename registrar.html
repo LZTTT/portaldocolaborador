@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registrar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <title>Portal do Colaborador - Registro de Ponto</title> 
+</head>
+<body>
+    <?php
+    session_start();
+
+    // Verificar se o usuário está autenticado
+    if (!isset($_SESSION["autenticado"]) || $_SESSION["autenticado"] !== true) {
+        header("Location: login.html");
+        exit();
+    }
+
+    $nomeUsuario = $_SESSION["nomeUsuario"];
+    ?>
+
+    <h1>Portal do Colaborador - Registro de Ponto</h1>
+    <p>Bem-vindo, <?php echo $nomeUsuario; ?>!</p>
+
+    <form action="registrar.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required><br>
+        <button type="submit" name="tipo_registro" value="entrada">Registrar Entrada</button>
+        <button type="submit" name="tipo_registro" value="saida">Registrar Saída</button>
+    </form>
+</body>
+</html>
