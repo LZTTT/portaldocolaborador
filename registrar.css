@@ -17,18 +17,13 @@ form {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nome{
-    font-family: 'Zen Dots', cursive;
-}
-
 label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-input[type="email"],
-input[type="password"] {
+input[type="text"] {
     padding: 8px;
     border: 1px solid #cccccc;
     border-radius: 4px;
